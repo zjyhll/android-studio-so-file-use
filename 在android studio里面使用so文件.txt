@@ -1,0 +1,9 @@
+ 在用android studio做百度地图的时候，发现拷贝so文件到libs cpu相对应的目录，发现运行的时候还是出错，错误提示为找不到so文件。
+网上搜了下，解决方式挺多的，看到一种方式比较好，直接改build.gradle文件。
+
+
+sourceSets {
+ main {
+ jniLibs.srcDirs = ['libs']
+}
+}
